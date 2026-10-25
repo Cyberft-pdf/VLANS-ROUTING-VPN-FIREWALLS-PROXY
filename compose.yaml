@@ -1,0 +1,26 @@
+
+name: vlans-routing-vpn-firewalls-proxy
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - frontend
+
+  web2:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    driver: bridge
+
+
+    
