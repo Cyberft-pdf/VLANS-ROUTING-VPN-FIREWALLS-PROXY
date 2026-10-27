@@ -2,7 +2,7 @@
 name: vlans-routing-vpn-firewalls-proxy
 
 services:
-  web:
+  web1:
     image: nginx:alpine
     ports:
       - "8080:80"
